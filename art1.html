@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap/bootstrap-dropdown.js"></script>
+  <title>Art and Craft Gallery</title>
+
+  <style>
+    .carousel-inner .d-flex img {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin: 5px;
+      border-radius: 10px;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+
+    .nav-link:hover {
+
+      color: white;
+    }
+
+    .dropdown-item {
+
+      color: white;
+    }
+
+    @media screen and (min-width:992px) {
+      .nav-item {
+        line-height: 80px;
+      }
+    }
+
+    .gallery img {
+      border-image-slice: 1;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .contains img {
+      width: 390px;
+      height: 264px;
+    }
+
+    select{
+      border: none;
+      color:white;
+      background-color: #121212 ;
+    }
+    @media (max-width: 1800px) {
+       footer {
+        display: none;
+       }
+
+       
+    }
+
+    
+    
+  </style>
+
+  
+</head>
+
+<body style="background-color: #111111 ;">
+
+  <nav class="navbar navbar-expand-lg navbar-dark p-3" id="headerNav" style=" position: -webkit-sticky; 
+  position: sticky; top:0; z-index: 99; background-color: #121212;" >
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto d-flex " style="gap:52px;">
+          <li class="nav-item" style="margin-top: 1%;">
+            <a class="nav-link mx-2" aria-current="page" href="#"><i class="fa-solid fa-house fa-lg" style="color:white"> </i>  Home</a>
+          </li>
+          <li class="nav-item dropdown" style="margin-top:2%;">
+            <select name="drp1" id="drp1">
+              <option value="1"><a  class="nav-link mx-2" aria-current="page" href="#">Category</a></option>
+              <option value="1"><a  class="nav-link mx-2" aria-current="page" href="#">Nature</a></option>
+              <option value="2"><a  class="nav-link mx-2" aria-current="page" href="#">Scenery</a> </option>
+              <option value="3"><a  class="nav-link mx-2" aria-current="page" href="#">Movie-Art</a> </option>
+              <option value="4"><a  class="nav-link mx-2" aria-current="page" href="#">Anime-Art</a></option>
+              <option value="5"><a  class="nav-link mx-2" aria-current="page" href="#">Canvas</a></option>
+            </select>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link mx-2" href="#">
+              <img src="ARTiFY-dark.gif" height="100" />
+            </a>
+          </li>
+          <li class="nav-item dropdown" style="margin-top:2%;">
+            <a href="art.html" style="color:white; text-decoration: none;"><i class="fa-regular fa-sun" style="color: #ffffff;"></i> Light Mode</a>
+            
+          </li>
+          <li class="nav-item dropdown" style="margin-top:2%;">
+            <select name="drp3" id="drp3">
+              <option value="1">For More</option>
+              <option value="1">Blog</option>
+              <option value="2">Contact Us</option>
+              <option value="3">About Us</option>
+              <option value="4">Help</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <hr style="color:white ">
+  <section style="margin-bottom: 2%;">
+    <div class="jumbotron mt-4" ;  >
+            <h3 class=" text-center" style="color:white ">Art & Craft Gallery</h3>
+            <p class=" text-center" style="color:white ">One Stop Place for all kind of Photo Galleries and Art</p>
+    </div>
+    <div class="contain mt-4" style="margin-left: 7%; margin-right: 7%;   height: 470px;">
+      <div id="artGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <!-- Image 1 -->
+          <div class="carousel-item active">
+            <div class="slide-content">
+              <img
+                src="https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Artwork 1" class="d-block w-100" style="height: 470px;  border-radius:10px; ">
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="carousel-item">
+            <div class="slide-content">
+              <img
+                src="https://images.pexels.com/photos/4371628/pexels-photo-4371628.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                alt="Artwork 2" class="d-block w-100" style="height: 470px; border-radius:10px; ">
+            </div>
+
+          </div>
+
+          <!-- Image 3 -->
+          <div class="carousel-item">
+            <div class="slide-content">
+              <img
+                src="https://images.pexels.com/photos/4693135/pexels-photo-4693135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Artwork 3" class="d-block w-100" style="height: 470px; border-radius:10px; ">
+            </div>
+
+          </div>
+          <!-- Add more carousel-item divs for additional images -->
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#artGalleryCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" href="#artGalleryCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="contains" style="margin-left: 7%; margin-right: 7%; margin-top: 3%;">
+      <div class="jumbotron">
+        <div class="c" style="display: flex; gap:15px; justify-content: center;">
+          <h3 class="text-center" style="color:white ">Art By Pablo Picasso</h3>
+          <button type="button" class="btn btn-primary btn-sm">For More</button>
+        </div>
+        <br>
+        <p class="text-center" style="color:white ">Pablo Picasso was one of the best artist in France at a time</p>
+      </div>
+
+      <div class="row gallery" style="background-color: #121212 ; border: 1px solid #121212 ; border-radius: 10px;">
+        <!-- Image 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISW-yAcFfSUffn_7mJnS-_YWexOjHicjaZIkWMqr-&s "
+            data-lightbox="gallery" data-title="Mountain 1">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTISW-yAcFfSUffn_7mJnS-_YWexOjHicjaZIkWMqr-&s "
+              class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href=" https://uploads1.wikiart.org/00198/images/pablo-picasso/old-guitarist-chicago.jpg!PinterestSmall.jpg"
+            data-lightbox="gallery" data-title="Mountain 1">
+            <img
+              src="https://uploads1.wikiart.org/00198/images/pablo-picasso/old-guitarist-chicago.jpg!PinterestSmall.jpg "
+              class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://uploads8.wikiart.org/00139/images/pablo-picasso/guernica-by-pablo-picasso.jpg!PinterestSmall.jpg "
+            data-lightbox="gallery" data-title="Mountain 1">
+            <img
+              src="https://uploads8.wikiart.org/00139/images/pablo-picasso/guernica-by-pablo-picasso.jpg!PinterestSmall.jpg "
+              class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href=" https://uploads3.wikiart.org/images/pablo-picasso/portrait-of-dora-maar-1937-1.jpg!PinterestSmall.jpg"
+            data-lightbox="gallery" data-title="Mountain 1">
+            <img
+              src="https://uploads3.wikiart.org/images/pablo-picasso/portrait-of-dora-maar-1937-1.jpg!PinterestSmall.jpg "
+              class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <!-- Add more image links in the same format -->
+      </div>
+    </div>
+
+
+    <div class="contains" style="margin-left: 7%; margin-right: 7%; margin-top: 3%;">
+      <div class="jumbotron">
+        <div class="c" style="display: flex; gap:15px; justify-content: center;" >
+          <h3 class="text-center" style="color:white ">Art By Van Gogh</h3>
+          <button type="button" class="btn btn-primary btn-sm">For More</button>
+        </div>
+        <br>
+        <p class="text-center" style="color:white ">Some finest art by Dutch painter Van Gogh</p>
+      </div>
+
+      <div class="row gallery" style="background-color: #121212 ; border: 1px solid #121212 ; border-radius: 10px;">
+        <!-- Image 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href=" https://iiif.micr.io/wsTyi/full/600,/0/default.webp" data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src=" https://iiif.micr.io/wsTyi/full/600,/0/default.webp" class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://iiif.micr.io/fhXoU/full/300,/0/default.webp" data-lightbox="gallery" data-title="Mountain 1">
+            <img src="https://iiif.micr.io/fhXoU/full/300,/0/default.webp" class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://iiif.micr.io/EoQoM/full/300,/0/default.webp " data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src="https://iiif.micr.io/EoQoM/full/300,/0/default.webp" class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://iiif.micr.io/QHzII/full/600,/0/default.webp " data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src="https://iiif.micr.io/QHzII/full/600,/0/default.webp" class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <!-- Add more image links in the same format -->
+      </div>
+    </div>
+
+
+
+    <div class="contains" style="margin-left: 7%; margin-right: 7%; margin-top: 3%;">
+      <div class="jumbotron">
+        <div class="c" style="display: flex; gap:15px; justify-content: center;">
+          <h3 class="text-center" style="color:white ">Art By Henri Matisse</h3>
+          <button type="button" class="btn btn-primary btn-sm">For More</button>
+        </div>
+        <br>
+        <p class="text-center" style="color:white ">Henri Matisse one of the undisputed masters of 20th century art</p>
+      </div>
+
+      <div class="row gallery" style="background-color: #121212 ; border: 1px solid #121212 ; border-radius: 10px;">
+        <!-- Image 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://www.henrimatisse.org/images/gallery/joy-of-life.jpg " data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src="https://www.henrimatisse.org/images/gallery/joy-of-life.jpg " class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href=" https://www.henrimatisse.org/images/gallery/the-bathers.jpg" data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src="https://www.henrimatisse.org/images/gallery/the-bathers.jpg " class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: white">
+          <a href="https://www.henrimatisse.org/images/photo-joy-of-life.jpg " data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src="https://www.henrimatisse.org/images/photo-joy-of-life.jpg " class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 " style="text-align: center; ;padding-top: 1%;padding-bottom: 1%;">
+          <a href="https://www.henrimatisse.org/images/amazingcarousel/woman-with-a-hat.jpg " data-lightbox="gallery"
+            data-title="Mountain 1">
+            <img src="https://www.henrimatisse.org/images/amazingcarousel/woman-with-a-hat.jpg "
+              class="img-thumbnail grayscale">
+
+          </a>
+          <p>
+        </div>
+
+        <!-- Add more image links in the same format -->
+      </div>
+    </div>
+
+  
+    <div class="contains" style="margin-left: 7%; margin-right: 7%; margin-top: 3%;">
+      <div class="jumbotron" style="background-color: #121212; border-radius: 10px;">
+        <div class="c" style="display: flex; gap: 15px; justify-content: center;">
+          <h3 class="text-center" style="color: white;">Some Animated Arts by Individuals</h3>
+          <button type="button" class="btn btn-primary btn-sm">For More</button>
+        </div>
+        <br>
+        <p class="text-center" style="color: white;">Newly added anime kawai and chibi art!!</p>
+      </div>
+       
+      <div class="horicoro" style="display:flex;gap:60px;">
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel" style="width:60%;padding: 1%;">
+          <div class="carousel-inner">
+            <!-- Image 1 -->
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-3" style="width: 100%;">
+                  <a href="https://magazine.artstation.com/wp-content/uploads/2023/06/ArtStation-Learning-Lighting-2.jpg" data-lightbox="gallery"
+                    data-title="Image 1">
+                    <img src="https://magazine.artstation.com/wp-content/uploads/2023/06/ArtStation-Learning-Lighting-2.jpg" class="img-thumbnail grayscale" style="width: 100%; height: 450px;">
+                  </a>
+                </div>
+                <!-- Add more images in the same format -->
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="row">
+                <div class="col-sm-3" style="width: 100%; overflow: hidden;">
+                  <a href="https://magazine.artstation.com/wp-content/uploads/2023/06/ArtStation-Learning-Lighting.jpg " data-lightbox="gallery"
+                    data-title="Image 3">
+                    <img src="https://magazine.artstation.com/wp-content/uploads/2023/06/ArtStation-Learning-Lighting.jpg " class="img-thumbnail grayscale" style="width: 100%; height: 450px; object-fit: cover;">
+                  </a>
+                </div>
+                <!-- Add more images in the same format -->
+              </div>
+            </div>
+
+    
+            <!-- Image 2 -->
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-sm-3" style="width: 100%; overflow: hidden;">
+                  <a href="https://cdna.artstation.com/p/assets/images/images/065/122/752/4k/feng-wei-c12-9268ca65f492887b3bfa736f0cac7321.jpg?1689592122" data-lightbox="gallery"
+                    data-title="Image 2">
+                    <img src="https://cdna.artstation.com/p/assets/images/images/065/122/752/4k/feng-wei-c12-9268ca65f492887b3bfa736f0cac7321.jpg?1689592122" class="img-thumbnail grayscale" style="width: 100%; height: 450px; object-fit: cover;">
+                  </a>
+                </div>
+                <!-- Add more images in the same format -->
+              </div>
+            </div>
+    
+            <!-- Image 3 -->
+    
+            <!-- Image 4 -->
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-sm-3" style="width: 100%;">
+                  <a href="https://magazine.artstation.com/wp-content/uploads/2023/07/image2.png" data-lightbox="gallery"
+                    data-title="Image 4">
+                    <img src="https://magazine.artstation.com/wp-content/uploads/2023/07/image2.png"
+                      class="img-thumbnail grayscale" style="width: 100%; height: 450px;">
+                  </a>
+                </div>
+                <!-- Add more images in the same format -->
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div style="width:30%; padding-top: 7%; padding-bottom: 7%;">
+          <h2 style="color:white;">Unleash the electrifying force of lightning through mesmerizing animated art.</h2>
+          <br>
+          <button type="button" class="btn btn-primary btn-sm">For More</button>
+        </div>
+
+      </div>
+     
+    </div>
+  </section>
+  
+  <hr style="color:white ">
+
+  <footer>
+    <div class="footlast" style="height: 73px;display: flex; width:100%;">
+        <div class="footlast1" style="width:635px;display: flex; justify-content: center; padding-top: 1.5%; ">
+            <a href="/about/policies/privacy" style="font-size: large; color:white;text-decoration: none;">Privacy
+                Legal Notice</a>
+        </div>
+        <div class="footlast2"
+            style="width:635px;display: flex; gap:20px;padding-top: 0.6%; justify-content: center;">
+            <div style="width:50px; height:50px ;display: flex;justify-content: center;align-items: center;">
+                <a href="http#"><i class="fa-brands fa-facebook-f" style="color:white"></i></a>
+            </div>
+            <div style="width:50px; height:50px;display: flex;justify-content: center;align-items: center;">
+                <a href="#"><i class="fa-brands fa-instagram " style="color:white"></i></a>
+            </div>
+            <div style="width:50px; height:50px; display: flex;justify-content: center;align-items: center;">
+                <a href="#"><i class="fa-brands fa-linkedin-in" style="color: white;"></i></a>
+            </div>
+            <div style="width:50px; height:50px; display: flex;justify-content: center;align-items: center;">
+                <a href="#"><i class="fa-brands fa-twitter " style="color:white;"></i></a>
+            </div>
+            <div style="width:50px; height:50px;display: flex;justify-content: center;align-items: center;">
+                <a href="#"><i class="fa-brands fa-youtube" style="color:white;"></i></a>
+            </div>
+            <div style="width:50px; height:50px;display: flex;justify-content: center;align-items: center;">
+                <a href="#"><i class="fa-brands fa-snapchat" style="color:white;"></i></a>
+            </div>
+            <div style="width:50px; height:50px;display: flex;justify-content: center;align-items: center;">
+                <a href="#"><i class="fa-brands fa-tiktok" style="color:white;"></i></a>
+            </div>
+        </div>
+        <div class="footlast3"
+            style="width:635px;display: flex; justify-content: center; padding-top: 1.5%; color:white">
+            © 2023 YATHARTH
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>
